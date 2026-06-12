@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe6ec,#fff);
+    color:#333;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#ff4f7a;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.escolha{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:320px;
+    padding:30px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.programa{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    animation:fade .8s ease;
+}
+
+.hidden{
+    display:none;
+}
+
+.cinema-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:linear-gradient(
+        135deg,
+        #8B0000,
+        #B22222
+    );
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    margin:40px 0;
+
+    gap:40px;
+}
+
+.texto-cinema{
+    flex:1;
+}
+
+.texto-cinema h3{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.texto-cinema p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.pipoca{
+    width:280px;
+
+
+    filter:
+        drop-shadow(
+            0 10px 15px rgba(0,0,0,.3)
+        );
+}
+
+.filmes,
+.pontos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.filme-card,
+.ponto-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.filme-card:hover,
+.ponto-card:hover{
+    transform:translateY(-8px);
+}
+
+.filme-card img{
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.ponto-card img{
+    width: 250px;
+    height: 150px;
+}
+
+.sinopse{
+    max-height: 90px;
+    overflow: hidden;
+    transition: max-height .5s ease;
+    line-height: 1.6;
+}
+
+.sinopse.expandida{
+    max-height: 1000px;
+}
+
+.btn-sinopse{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pipoca{
+    display:block;
+    width:200px;
+    margin:30px auto;
+}
+
+.imagem-museu{
+    width:100%;
+    border-radius:20px;
+    margin:20px 0;
+}
+
+.mapa{
+    width:100%;
+    margin-top:20px;
+    border-radius:15px;
+}
+
+.descricao{
+    margin-top:20px;
+    line-height:1.8;
+    text-align:center;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .cinema-banner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .pipoca{
+        width:200px;
+    }
+
+}
